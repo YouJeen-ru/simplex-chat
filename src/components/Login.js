@@ -12,19 +12,10 @@ const Login = () => {
             <div id='login-card'>
                 <h2>Welcome to Simplex!</h2>
 
-                <div className='login-button google'>
-                    <GoogleOutlined
-                        onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
-                    /> Sing In With Google
-                </div>
-
-
-                <br/>  <br/>
-
-                <div className='login-button facebook'>
-                    <FacebookOutlined
-                        onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
-                    /> Sing In With Facebook
+                <div className='login-button google'
+                     onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
+                >
+                    <GoogleOutlined/> Sing In With Google
                 </div>
 
             </div>

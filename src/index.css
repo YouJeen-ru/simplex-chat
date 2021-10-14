@@ -16,6 +16,12 @@
   height: 100vh;
 }
 
+.nav-bar {
+  width: 100%;
+  height: 66px;
+  background-color: rgba(86, 74, 255, 0.79);
+}
+
 .logo-tab {
   position: absolute;
   left: 22px;
@@ -31,6 +37,7 @@
   right: 22px;
   color: white;
   cursor: pointer;
+  font-weight: 900;
 }
 
 ::-webkit-scrollbar {
@@ -92,4 +99,13 @@
   position: relative;
   left: calc(50vw - 33px);
   top: calc(50vh - 22px);
+}
+
+.ce-primary-button,
+.ce-message-bubble {
+  background-color: rgba(86, 74, 255, 0.79) !important;
+}
+
+.ce-chat-title-text {
+  color: rgba(86, 74, 255, 0.79) !important;
 }
