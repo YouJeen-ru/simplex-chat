@@ -1,5 +1,9 @@
 import React from 'react'
 import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
+import 'firebase/app'
+
+import { auth } from "../firebase";
+import firebase from "firebase/app";
 
 const Login = () => {
 
@@ -9,14 +13,18 @@ const Login = () => {
                 <h2>Welcome to Simplex!</h2>
 
                 <div className='login-button google'>
-                    <GoogleOutlined/> Sing In With Google
+                    <GoogleOutlined
+                        onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
+                    /> Sing In With Google
                 </div>
 
 
                 <br/>  <br/>
 
                 <div className='login-button facebook'>
-                    <FacebookOutlined/> Sing In With Facebook
+                    <FacebookOutlined
+                        onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
+                    /> Sing In With Facebook
                 </div>
 
             </div>
